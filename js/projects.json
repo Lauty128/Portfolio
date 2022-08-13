@@ -1,0 +1,37 @@
+[
+    {
+        "id":"cd",
+        "name":"Conversor de divisas",
+        "img":"img/projects/currencyConverter.PNG",
+        "url":"https://github.com/Lauty128/Currrency-Converter",
+        "description":"Conversor de divisas que devuelve el valor de una moneda en otra y, a su vez, el valor de la otra moneda cuando esta vale 1"
+    },
+    {
+        "id":"cnnr",
+        "name":"Conversor de números Naturales a Romanos",
+        "img":"img/projects/converterToRoman.PNG",
+        "url":"https://github.com/Lauty128/Coverter-Number-Natural-to-Roman",
+        "description":"Conversor de números naturales a romanos que toma solo hasta el número 1000"
+    },
+    {
+        "id":"jppt",
+        "name":"Juego de piedra, papel o tijera",
+        "img":"img/projects/game.PNG",
+        "url":"https://github.com/Lauty128/Game",
+        "description":"Sencillo juego de piedra, papel o tijera. La máquina selecciona las opciones de forma aleatoria, utilizando Math.random()."
+    },
+    {
+        "id":"gi",
+        "name":"Galeria de Imagenes",
+        "img":"img/projects/galleryOfImages.PNG",
+        "url":"https://github.com/Lauty128/Gallery-Dinamic",
+        "description":"Galería de imágenes, en la cual las imágenes verticales ocupan dos filas, para poder mostrarse de forma correcta. También dando click en una imagen, la misma se puede visualizar en un formato más grande y, a su vez, poder ir hacia los costados para ver el resto de imágenes"
+    },
+    {
+        "id":"fd",
+        "name":"Filtrar Datos",
+        "img":"img/projects/filterData.PNG",
+        "url":"https://github.com/Lauty128/Filter-Data",
+        "description":"Aquí lo que hice fue obtener datos, a través de una API, y filtrarlos en base al nombre y apellido"
+    }
+]

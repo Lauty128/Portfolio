@@ -1,0 +1,219 @@
+*{ box-sizing: border-box;     font-family:'Khand', sans-serif; }
+body{ padding: 0; margin: 0; background-color: #2C2C2B;}
+
+/*---------------------- CABECERA -----------------------*/
+
+header{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    display: flex;
+    background-image: url(../img/office-g57d11e9a5_1920.jpg);
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    user-select: none;
+}
+
+.containerMenu{
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    gap: 30px;
+    color: #E0E0E0;
+}.containerMenu h3:hover{ color: #fff; cursor: pointer; border-bottom: 2px solid #fff; }
+.containerTextHome{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}.containerTextHome h1{ margin: 0; color: #FAEDBC; font-size: 50px; line-height: 80%; }
+.containerTextHome h3{ margin: 0; color: #E0E0E0; font-weight: 300; }
+.containerSocialNetworks{ margin-top: 15px;  }
+.containerSocialNetworks i{ 
+    color: #E0E0E0; 
+    margin: 0 5px;
+    font-size: 25px; 
+    border: #FAEDBC 2px solid; 
+    padding: 8px; 
+    border-radius: 50%; 
+    cursor: pointer;  
+    transition: linear 0.2s;
+}.containerSocialNetworks i:hover{ transform: scale(1.15); color: #fff; }
+
+/*---------------------- SOBRE MI -----------------------*/
+
+.sectionAboutMe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 30px;
+}
+
+.imgMe{ width: 300px; height: 250px; background-color: #FAEDBC;}
+.imgMe img{ object-fit: cover; width: 100%;  height: 100%; margin: 10px; object-position: top;}
+
+.contentAboutMe{ max-width: 400px }
+.contentAboutMe h3{ margin: 0; line-height: 80%; color: #FAEDBC; font-size: 24px; }
+.contentAboutMe p { margin: 0; color: #E0E0E0 }
+
+#buttonProjects{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    background-color: #E0E0E0;
+    width: 120px;
+    padding: 8px 5px;
+    height: fit-content;
+    align-content: center;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.effectButtonProjects{
+    position: absolute;
+    right: -22px;
+    top: 0;
+    width: 60px;
+    height: 41px;
+    background-color: #FAEDBC;
+    transform-origin: right;
+    transform: skewX(40deg);
+    transition: linear 0.3s;
+}
+#buttonProjects:hover .effectButtonProjects{ transform:  scaleX(3); }
+#buttonProjects h4, #buttonProjects i{ margin: 0; z-index: 10; }
+
+/*---------------------- HABILIDADES -----------------------*/
+
+.sectionSkills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 150px;
+    row-gap: 0;
+}
+.containerSkills h3{ text-align: center; font-size: 24px; color: #E0E0E0; border-bottom: 2px solid #E0E0E0; }
+.skills{ display: flex; justify-content:center ; gap: 20px}
+.skill{ text-align: center }
+.skill i, .skill img{ display: block; font-size: 50px; color: #FAEDBC; transition: transform linear .2s }.skill i:hover{ transform: scale(1.2); }
+.skill h5{ margin-top: 3px; color: #E0E0E0 }
+
+
+/*---------------------- PROYECTOS -----------------------*/
+
+.sectionProjects{ background-color: #4A4A4A; height: fit-content; margin-top: 70px; padding: 20px 10px; }
+.tittleProjects{ color: #FAEDBC; text-align: center; font-size: 24px; }
+
+.containerProjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    justify-content: center;
+    align-items:stretch;
+    gap: 20px;
+    padding: 0 100px;
+}
+.project{ overflow: hidden; position: relative; cursor: pointer; transition: filter linear .2s }
+.project:hover { filter: brightness(70%); }
+.containerImgProject{ width: 100%; height: 100%; pointer-events: none; }
+.containerImgProject img{ width: 100%; height: 100%; object-fit: cover; object-position: top }
+.project h3{ 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    padding: 10px;
+    line-height: 100%;
+    background-color: #e0e0e0af;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    pointer-events: none;
+}
+
+
+/*---------------------- FOOTER -----------------------*/
+
+footer{
+    background-color: #2C2C2B;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    color: #E0E0E0;
+}
+
+
+
+
+
+/*------------------- VENTANA DE PROYECTO -------------------*/
+
+.containerDescriptionProject{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.descriptionProject{
+    background-color: #E0E0E0;
+    width: 60%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    height: fit-content;
+    transform: scale(1);
+    transition: transform .2s;
+}
+.imageDescriptionProject{
+    max-width: 100%;
+    max-height: 100%;
+}
+.imageDescriptionProject img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.textDescriptionProject{ max-width: 500px; pointer-events: none; }
+.textDescriptionProject h2 { margin: 0  }
+.textDescriptionProject p{ margin: 0; margin-bottom: 12px; }
+.textDescriptionProject a{
+    color: #000;
+    text-decoration: none;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.hideContainerModal{ display: none }
+.hideModal{ transform: scale(0.001) }
+
+
+/*---------------------- MEDIA QUERIES -----------------------*/
+
+@media(max-width:700px){
+    .imgMe{ width: 250px; height: 300px; background-color: #FAEDBC;}
+    .contentAboutMe{ width: 250px; }
+}
+@media(max-width:550px){
+    .sectionSkills{ column-gap: 50px; }
+    
+    .sectionAboutMe{ display: block; margin: auto; width: fit-content; text-align: center; }
+    .imgMe{ width: 200px; height: 200px; margin: auto; margin-bottom: 30px;}
+    #buttonProjects{ margin: 15px auto;}
+}
