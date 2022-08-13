@@ -152,10 +152,6 @@ footer{
     color: #E0E0E0;
 }
 
-
-
-
-
 /*------------------- VENTANA DE PROYECTO -------------------*/
 
 .containerDescriptionProject{
@@ -189,7 +185,7 @@ footer{
     height: 100%;
     object-fit: cover;
 }
-.textDescriptionProject{ max-width: 500px; pointer-events: none; }
+.textDescriptionProject{ max-width: 500px }
 .textDescriptionProject h2 { margin: 0  }
 .textDescriptionProject p{ margin: 0; margin-bottom: 12px; }
 .textDescriptionProject a{
@@ -198,22 +194,8 @@ footer{
     padding: 5px;
     border: 1px solid #000;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .hideContainerModal{ display: none }
 .hideModal{ transform: scale(0.001) }
-
-
-/*---------------------- MEDIA QUERIES -----------------------*/
-
-@media(max-width:700px){
-    .imgMe{ width: 250px; height: 300px; background-color: #FAEDBC;}
-    .contentAboutMe{ width: 250px; }
-}
-@media(max-width:550px){
-    .sectionSkills{ column-gap: 50px; }
-    
-    .sectionAboutMe{ display: block; margin: auto; width: fit-content; text-align: center; }
-    .imgMe{ width: 200px; height: 200px; margin: auto; margin-bottom: 30px;}
-    #buttonProjects{ margin: 15px auto;}
-}
