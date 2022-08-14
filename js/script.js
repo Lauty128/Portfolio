@@ -18,6 +18,7 @@ printDataProjects = async()=>{
 
         div.classList.add("project")
         div.setAttribute("id", project.id)
+        div.setAttribute("data-aos", "zoom-in")
         div2.classList.add("containerImgProject")
         image.setAttribute("src", project.img)
         h3.textContent = project.name

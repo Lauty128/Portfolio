@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mediaQueries.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +17,8 @@
     <header>
             <nav class="containerMenu">
                 <h3 id="home">INICIO</h3>
-                <h3 id="aboutMe">SOBRE MI</h3>
-                <h3 id="projects">PROYECTOS</h3>
-                <h3 id="contactMe">CONTACTO</h3>
+                <h3 id="aboutMe"><a href="#sectionAboutMe">SOBRE MI</a></h3>
+                <h3 id="projects"><a href="#sectionProjects">PROYECTOS</a></h3>
             </nav>
             <div class="containerTextHome">
                 <h1>LAUTARO SILVERII</h1>
@@ -31,25 +31,25 @@
             </div>
     </header>
 
-    <section class="sectionAboutMe">
+    <section class="sectionAboutMe" id="sectionAboutMe" data-aos="fade-up">
         <div class="imgMe">
-            <img src="img/retrato-vertical-de-tamano-completo-de-hombre-joven-moreno-alegre-con-estilo-informal-mira-la-camara-sobre-fondo-lifgt-2b7mm48.jpg" alt="Imagen Mia">
+            <img src="img/retrato-vertical-de-tamano-completo-de-hombre-joven-moreno-alegre-con-estilo-informal-mira-la-camara-sobre-fondo-lifgt-2b7mm48.jpg" alt="Imagen Mia" data-aos="fade-up">
         </div>
         <div class="contentAboutMe">
             <h3>SOBRE MI</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae ipsum repudiandae officiis suscipit impedit. Maiores voluptas ea, doloribus quibusdam maxime quia veniam sit cumque quas vel soluta quasi quis reprehenderit illo minus. Modi vero illum itaque laborum odio vitae alias. Voluptatibus quae atque, quod aliquid nostrum animi natus harum accusantium.</p>
-            <div id="buttonProjects">
+            <a id="buttonProjects" href="#sectionProjects">
                 <div class="effectButtonProjects"></div>
                 <h4>PROYECTOS</h4>
                 <i class="fa-solid fa-arrow-down"></i>
-            </div>
+            </a>
         </div>
     </section>
 
     <section class="sectionSkills">
         <div class="containerSkills">
             <h3>LENGUAJES</h3>
-            <div class="skills">
+            <div class="skills" data-aos="fade-right">
                 <div class="skill">
                     <i class="fa-brands fa-html5"></i>
                     <h5>HTML5</h5>
@@ -66,7 +66,7 @@
         </div>
         <div class="containerSkills">
             <h3>HERRAMIENTAS</h3>
-            <div class="skills">
+            <div class="skills" data-aos="fade-left">
                 <div class="skill">
                     <i class="fa-brands fa-git-alt"></i>
                     <h5>GIT</h5>
@@ -79,7 +79,7 @@
         </div>
     </section>
 
-    <section class="sectionProjects">
+    <section class="sectionProjects" id="sectionProjects">
         <h3 class="tittleProjects">PROYECTOS</h3>
         <div class="containerProjects">
             <!-- PROYECTOS AGREGADOS A TRAVES DE JS -->
@@ -104,6 +104,8 @@
     </footer>
 
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init() </script>
     <script src="js/script.js"></script>
 </body>
 </html>
