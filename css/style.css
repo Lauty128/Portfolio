@@ -199,7 +199,14 @@ footer{
     border: 1px solid #000;
     border-radius: 10px;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .hideContainerModal{ display: none }
 .hideModal{ transform: scale(0.001) }
+
+
+/*------------------- WEBKIT -------------------*/
+
+body::-webkit-scrollbar{ display: none }

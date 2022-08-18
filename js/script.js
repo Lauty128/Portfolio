@@ -54,7 +54,6 @@ openDescriptionProject = data=>{
  /* -------------------- CERRAR MODAL DE PROYECTOS ----------------------- */
 
 containerDescriptionProject.addEventListener("click", e=>{
-    console.log(e.target)
     if(e.target.classList.contains("containerDescriptionProject")){
         e.target.firstElementChild.classList.add("hideModal")
         setTimeout(()=>{ e.target.classList.add("hideContainerModal") },250)
