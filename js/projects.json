@@ -3,35 +3,40 @@
         "id":"cd",
         "name":"Conversor de divisas",
         "img":"img/projects/currencyConverter.PNG",
-        "url":"https://github.com/Lauty128/Currrency-Converter",
+        "url":"https://lauty128.github.io/Currrency-Converter/",
+        "urlCode": "https://github.com/Lauty128/Currrency-Converter/",
         "description":"Conversor de divisas que devuelve el valor de una moneda en otra y, a su vez, el valor de la otra moneda cuando esta vale 1"
     },
     {
-        "id":"cnnr",
-        "name":"Conversor de números Naturales a Romanos",
-        "img":"img/projects/converterToRoman.PNG",
-        "url":"https://github.com/Lauty128/Coverter-Number-Natural-to-Roman",
-        "description":"Conversor de números naturales a romanos que toma solo hasta el número 1000"
+        "id":"gi",
+        "name":"To-Do List",
+        "img":"img/projects/to-do_list.PNG",
+        "url":"https://lauty128.github.io/To-Do-List/",
+        "urlCode": "https://github.com/Lauty128/To-Do-List",
+        "description":"Lista de Tareas utilizando Local Storage. Se pueden agregar, modificar y eliminar tareas, y todas estas opciones vienen con validaciones. Este proyecto es muy interesante para inspeccionar"
     },
     {
         "id":"jppt",
         "name":"Juego de piedra, papel o tijera",
         "img":"img/projects/game.PNG",
-        "url":"https://github.com/Lauty128/Game",
+        "url":"https://lauty128.github.io/Game/",
+        "urlCode": "https://github.com/Lauty128/Game",
         "description":"Sencillo juego de piedra, papel o tijera. La máquina selecciona las opciones de forma aleatoria, utilizando Math.random()."
     },
     {
-        "id":"gi",
-        "name":"Galeria de Imagenes",
-        "img":"img/projects/galleryOfImages.PNG",
-        "url":"https://github.com/Lauty128/Gallery-Dinamic",
-        "description":"Galería de imágenes, en la cual las imágenes verticales ocupan dos filas, para poder mostrarse de forma correcta. También dando click en una imagen, la misma se puede visualizar en un formato más grande y, a su vez, poder ir hacia los costados para ver el resto de imágenes"
+        "id":"cnnr",
+        "name":"Conversor de números Naturales a Romanos",
+        "img":"img/projects/converterToRoman.PNG",
+        "url":"https://lauty128.github.io/Coverter-Number-Natural-to-Roman/",
+        "urlCode": "https://github.com/Lauty128/Coverter-Number-Natural-to-Roman",
+        "description":"Conversor de números naturales a romanos que toma solo hasta el número 1000"
     },
     {
         "id":"fd",
-        "name":"Filtrar Datos",
-        "img":"img/projects/filterData.PNG",
-        "url":"https://github.com/Lauty128/Filter-Data",
-        "description":"Aquí lo que hice fue obtener datos, a través de una API, y filtrarlos en base al nombre y apellido"
+        "name":"Ta-Te-Ti Game",
+        "img":"img/projects/ta-te-ti_game.PNG",
+        "url":"https://lauty128.github.io/TicTacToe-Game/",
+        "urlCode": "https://github.com/Lauty128/TicTacToe-Game",
+        "description":"Sencillo juego de Ta-Te-Ti que indica cuando alguien ha ganado la partida y pausa todas las opciones de juego hasta que se reinicie"
     }
 ]

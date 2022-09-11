@@ -38,7 +38,8 @@ openDescriptionProject = data=>{
     document.querySelector(".imageDescriptionProject img").setAttribute("src", data[0].img)
     document.querySelector(".textDescriptionProject h2").textContent = data[0].name.toUpperCase()
     document.querySelector(".textDescriptionProject p").textContent = data[0].description
-    document.querySelector(".textDescriptionProject a").setAttribute("href", data[0].url)
+    document.querySelector(".optionsDescriptionProject").children[0].setAttribute("href", data[0].urlCode)
+    document.querySelector(".optionsDescriptionProject").children[1].setAttribute("href", data[0].url)
     document.querySelector(".containerDescriptionProject").classList.remove("hideContainerModal")
     setTimeout(()=>{ document.querySelector(".descriptionProject").classList.remove("hideModal") },50) 
 }
