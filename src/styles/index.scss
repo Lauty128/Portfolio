@@ -1,0 +1,185 @@
+//---- Settings
+@import 'config/variables';
+
+//---- Generics
+@import 'config/reset';
+
+
+//------------------------------------------
+//---------------- MENU --------------------
+//------------------------------------------
+.Menu{
+    width: 100%;
+    height: fit-content;
+    padding: 0 1em;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #E0E0E0;
+    background-color: #545454;
+    position: fixed;
+    z-index: 10;
+
+    // --------------- IMG   
+    &__image{ width: 5em }
+
+    // --------------- LINKS
+    &__links{ display: flex; gap: 2em }
+    &__h3{ 
+        position: relative; 
+        overflow: hidden; 
+        line-height: 130%;
+        & a{ color:#E0E0E0; text-decoration: none; user-select: none; }
+    }
+    &__h3::after{
+        content: "";
+        position: absolute;
+        width: 115%;
+        height: .1em;
+        background-color: #FAEDBC;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transition: transform ease-in .2s;
+    }
+    &__h3--main a{ color: #FAEDBC }
+    &__h3:hover::after{ transform: translateX(-50%)  }
+
+    // --------------- BUTTON
+    &__button{
+        width: 2.5em;
+        height: 2em;
+        cursor: pointer;
+        display: none;
+        
+        & span{
+            display: block;
+            width: 100%;
+            height: .3em;
+            background-color: #FAEDBC;
+            pointer-events: none;
+            transform-origin: left;
+            transition: transform .2s linear, opacity .2s linear;
+        }
+    }
+    
+    
+    &__buttonDiv2, &__buttonDiv3{ margin-top: .5em }
+    
+    &__button--active &__buttonDiv1{
+        transform: rotate(40deg);
+    }
+    &__button--active &__buttonDiv2{
+        transform: translateX(-2em);
+        opacity: 0;
+    
+    }
+    &__button--active &__buttonDiv3{
+        transform: rotate(-40deg);
+    }
+}
+
+//------------------------------------------
+//---------------- HEADER ------------------
+//------------------------------------------
+.Header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    background-image: url(../assets/office-g57d11e9a5_1920.jpg);
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    // ------------------------- TEXT
+    &__textContainer{
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+    &__h1{ margin: 0; color: #FAEDBC; font-size: 3em; line-height: 80% }
+    &__h3{ margin-bottom: 1em; color: #E0E0E0; font-weight: 300 }
+    
+    //----------------------- NETWORKS   
+    &__networks{ margin-top: .5em; display: flex; gap: 1em; }
+    &__network-icon{
+        border: 2px solid #FAEDBC;
+        border-radius: 50%;
+        display: flex;
+        padding: .3em;
+        font-size: 1.8em;
+        color: #c2c2c2;
+        cursor: pointer;
+        
+        &:hover{ color: #fff }
+    }
+
+}
+
+
+//------------------------------------------
+//---------------- FOOTER ------------------
+//------------------------------------------
+.Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    padding: 1em 1em 0 1em;
+    background-color: rgb(68, 68, 68);
+
+    &__h4{ font-size: 1.6em; color: rgb(201, 201, 201); margin-bottom: .5em; }
+    
+    &__network{
+        margin-top: .7em;
+        font-size: 1.3em;
+        color: rgb(138, 138, 138);
+        text-align: center;
+        padding: .3em .6em;
+    }
+    &__network svg{ vertical-align: text-top;  }
+    &__network:hover{ color: rgb(201, 201, 201); }
+    
+    &__p{ margin: .5em 0; color: rgb(201, 201, 201) }
+}
+
+
+
+// -------------------------------------------------------------------
+// ----------------------------- @MEDIA ------------------------------
+// -------------------------------------------------------------------
+@media screen and (max-width:700px) {
+    .Menu{
+        &__button{ display: block }
+        
+        &__links{
+            margin-top: -100%;
+            width: 100%;
+            flex-direction: column;
+            padding: 1em 0;
+        }
+        &__h3::after{ width: 100%; left: 0; transform-origin: left; transform: scaleX(0); }
+        &__h3:hover::after{ transform: scaleX(1)  }
+        
+        &__links--active{ margin-top: 0 }
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    .Header__h1{ font-size: 2.5em }
+    .Header__network-icon{ font-size:1.3em }
+}

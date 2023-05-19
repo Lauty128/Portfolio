@@ -1,6 +1,9 @@
 //---- Dependencies
+    import { Menu, Header, Footer } from './components/Static';
+  
 
 //---- Styles & assets
+  import './styles/index.scss'
 
 //------------- AOS Config
   import AOS from "aos"
@@ -12,7 +15,9 @@ function App() {
 
   return (
     <>
-      <h1>PORTFOLIO</h1>
+      <Menu />
+      <Header />
+      <Footer />
     </>
   )
 }
