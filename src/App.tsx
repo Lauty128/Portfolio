@@ -1,5 +1,5 @@
 //---- Dependencies
-    import { Menu, Header, Footer } from './components/Static';
+  import { Menu, Header, Footer } from './components/static';
   
 
 //---- Styles & assets
