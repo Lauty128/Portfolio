@@ -4,6 +4,8 @@
 //---- Generics
 @import 'config/reset';
 
+//---- Utils
+@import './config/components';
 
 //------------------------------------------
 //---------------- MENU --------------------
@@ -157,10 +159,7 @@
 }
 
 
-
-// -------------------------------------------------------------------
-// ----------------------------- @MEDIA ------------------------------
-// -------------------------------------------------------------------
+//--------------------------------- @MEDIA OF <MENU> AND <HEADER>
 @media screen and (max-width:700px) {
     .Menu{
         &__button{ display: block }
@@ -182,4 +181,125 @@
 @media screen and (max-width:500px) {
     .Header__h1{ font-size: 2.5em }
     .Header__network-icon{ font-size:1.3em }
+}
+
+//--------------------------------------------
+//---------------- ABOUT ME ------------------
+//--------------------------------------------
+
+.AboutMe{ 
+    width: 100%; 
+    padding: 5em 0; 
+    padding-bottom: 0;
+
+    &__container{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 3em;
+        margin-bottom: 5em;
+    }
+    
+    &__imageContainer{ width: 17em; height: 20em; background-color: #FAEDBC;}
+    &__image{ 
+        width: 100%;  
+        height: 100%; 
+        margin: -1em 0em 0 1em; 
+        box-shadow: -.2em .2em 7px rgba(0,0,0,0.4);
+        object-position: center;
+    }
+    
+    &__textContainer{ max-width: 400px }
+    &__h3{ margin-bottom: .6em; color: #FAEDBC; font-size: 24px; }
+    &__p { margin: 0; color: #E0E0E0; font-size: 1.1em; }
+    
+    &__button{
+        position: relative;
+        display: flex;
+        background-color: #E0E0E0;
+        width: fit-content;
+        margin-top: 2em;
+        padding: .5em;
+        overflow: hidden;
+        z-index: 8;
+    }
+    .AboutMe__effectButton{   
+        position: absolute;
+        left: -10px;
+        top: 0;
+        width: 4em;
+        height: 3em;
+        background-color: #FAEDBC;
+        transform-origin: left;
+        transform: skewX(40deg);
+        transition: transform linear .3s;
+    }
+    .AboutMe__button:hover .AboutMe__effectButton{ transform: scaleX(4); }
+    .AboutMe__h4{ margin-left: .5em; z-index: 10 }
+    .AboutMe__button svg{ margin: 0; z-index: 10 }
+}
+
+//---------------------------------------------
+//---------------- MORE INFO ------------------
+//---------------------------------------------
+.MoreInfo{
+    width: 100%;
+    padding: 5em 10%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    background-color: rgb(68, 68, 68);
+
+    //------------------------------ TEXT
+    &__textContainer{ width: 90%; padding-top: .5em; }
+    &__title{ color: #FAEDBC; text-decoration: underline }
+    &__text{ margin-bottom: 2em; color: $primary-color-text; font-size: 1.2em }
+    &__button{
+        width: fit-content;
+        font-size: 1.2em;
+        background-color: #FAEDBC;
+        padding: .5em;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+        transition: box-shadow linear .2s;
+    }
+    &__button:hover{ box-shadow: 0 0 10px rgba(0,0,0,0.8) }
+    
+    //------------------------------- ASIDE
+    &__aside{ padding-left: .5em; border-left: .1em solid $secundary-color-text }
+    &__articlesTitle{ color: #FAEDBC;  text-decoration: underline;  margin: .5em auto 1em auto }
+}
+
+//--------------------------------- @MEDIA OF <ABOUTME> AND <MOREINFO>
+@media screen and (max-width:1050px) {
+    .Section{ padding: 5em 5% }
+}
+
+@media screen and (max-width:950px) {
+    .AboutMe__textContainer{ max-width: 350px }
+
+    .MoreInfo{ 
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 4em;
+        
+        &__textContainer{ display: flex; flex-direction: column; padding-top: 2em }
+        &__text{ text-align: justify }
+        &__button{ align-self: center }
+    
+        &__aside{ width: 90%; border: none; padding: 0 0 4em 0 }
+        &__title, &__articlesTitle{ text-align: center }
+    }
+    
+}
+
+@media screen and (max-width:700px){
+    .AboutMe{
+        &__container{ flex-direction: column; align-items: center; margin-bottom: 3em; }
+        &__textContainer{ display: flex; flex-direction: column; align-items: center; }
+        &__h3{ text-align: center }
+        &__p{ text-align: justify }
+    }
 }

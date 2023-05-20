@@ -1,5 +1,6 @@
 //---- Dependencies
   import { Menu, Header, Footer } from './components/static';
+  import { AboutMe } from './components';
   
 
 //---- Styles & assets
@@ -17,6 +18,7 @@ function App() {
     <>
       <Menu />
       <Header />
+      <AboutMe />
       <Footer />
     </>
   )

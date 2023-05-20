@@ -1,0 +1,69 @@
+//------------------------------------------------
+//---------------- ARTICLE CARD ------------------
+//------------------------------------------------
+.ArticleCard{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1em;
+    padding: .5em;
+    border-bottom: .05em solid rgb(92, 92, 92);
+    gap: .5em;
+    transform-origin: left;
+    overflow: hidden;
+    transition: transform linear .3s;
+
+    &:hover{
+        border: none;
+        box-shadow: -1px 5px 6px rgba(0,0,0, .8);
+        transform: scale(1.1);
+    }
+    &__image{ width: 7em }
+    &__div{  width: 70% }
+    &__span{ color: $secundary-color-text }
+    &__h3{
+        margin-top: .5em;
+        overflow: hidden;
+        color: $primary-color-text;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    
+    //-------------- @MEDIA
+    @media screen and (max-width:1050px) {
+        &__div{ width: 60% }
+    }
+    
+    @media screen and (max-width:950px) {
+        &{ transform-origin: center }
+        &__div{  width: 90% }
+    }
+}
+
+.ArticlePreload{ 
+    display: grid;
+    gap: .5em;
+    grid-template-columns: 30% calc(70% - 1em);
+    height: 5em;
+    max-width: 100%;
+    margin-top: 1.5em;
+    animation-name: preload;
+    animation-timing-function: ease-out;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+
+    &__image, &__text, &__title{ background-color: #979797cc }
+    &__image{ width: 100%; height: 100% }
+    &__div{ display: flex; flex-direction: column; gap: .5em; justify-content: flex-end; }
+    &__text{ width: 80%; height: 1em; }
+    &__title{ width: 100%; height: 1.8em; }
+}   
+
+@keyframes preload{
+    0%{ opacity: 1; }
+    25%{ opacity: .05 }
+    50%{ opacity: 1 }
+    75%{ opacity: .05 }
+    100%{ opacity: 1 }
+}
+
+/* -------------------------- @MEDIA -------------------------------- */
