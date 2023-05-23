@@ -1,6 +1,7 @@
 //---------- Models
 import { articleInterface, articlesOKResponse } from "@/models/data"
 
+
 export async function getArticles(size:Number):Promise<articleInterface[] | null>{
     const url = `${import.meta.env.VITE_BLOG_URL}api/articles?size=${size}`
 

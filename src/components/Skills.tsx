@@ -1,8 +1,10 @@
-//import { projectsInterface } from "@/models"
-
+//------ Assets
 import { languages, tools, frameworks, technologies } from "@/data"
+
+//------ Models
 import { technologiesInterface } from "@/models"
 
+//------ Functions
 function Technologies(data:technologiesInterface[]){
     return data.map(element =>{
         return  <div className="Skills__icon" key={`${element.id}`} title={element.name} >
