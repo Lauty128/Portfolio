@@ -455,3 +455,91 @@
 
 }
 
+//----------------------------------------------
+//---------------- CONTACT --------------------
+//----------------------------------------------
+.ContactMe{ 
+    padding: 3em 2em ;
+
+    &__h2{  color: #FAEDBC; text-align: center; text-decoration: underline }
+    
+    &__form{
+        margin: 2em auto 2em auto;
+        width: 70%;
+        display:flex;
+        flex-direction: column;
+        gap: 1.5em;
+        align-items: stretch;
+    }
+    
+    &__label{ display: block; color: rgb(187, 187, 187); margin-bottom: .2em }
+    
+    &__input{
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 1.4em;
+        padding: .5em;
+        background-color: rgb(109, 109, 109);
+        color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    &__textarea{ resize: none; height: 15em }
+    &__input--error{ color:  rgb(146, 25, 25) }
+    
+    &__submit{
+        padding: .8em;
+        background-color: #FAEDBC;
+        border: none;
+        cursor: pointer;
+        font-weight: 700;
+        color: rgb(88, 88, 88);
+        font-size: 1.2em;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    &__submit--block{
+        pointer-events:none;
+        animation: submitForm 1.2s infinite ease-in-out;
+    }
+
+    @media screen and (max-width:800px){
+        &__form{ width: 90% }
+    }
+
+    @media screen and (max-width:510px){
+        &{ padding: 3em 1em }
+        &__form{ width: 100% }
+    }
+}
+
+@keyframes submitForm{
+    0%  { opacity: 1 }
+    50% { opacity: 0 }
+    100%{ opacity: 1 }
+}
+
+.formError{ animation: tiembla .1s infinite }
+
+@keyframes tiembla{
+    0%  { transform:rotateZ(-.5deg); }
+    50% { transform:rotateZ( 0deg) scale(.98); }
+    100%{ transform:rotateZ( .5deg); }
+}
+
+/*-------------------------- Message Box*/
+.Message{
+    background-color: rgb(39, 100, 37);
+    width: 20em;
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    transform: translateX(25em);
+    transition: transform ease-in .3s;
+    
+    &--active{ transform: translateX(0); }
+    &--error{
+        background-color: rgb(104, 39, 39);
+    }
+}
+

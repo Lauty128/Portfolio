@@ -1,6 +1,6 @@
 //---- Dependencies
   import { Menu, Header, Footer } from './components/static';
-  import { AboutMe, Skills, Projects } from './components';
+  import { AboutMe, Skills, Projects, Contact } from './components';
   
 
 //---- Styles & assets
@@ -21,6 +21,7 @@ function App() {
       <AboutMe />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </>
   )
