@@ -12,8 +12,19 @@ export interface articlesOKResponse{
     total: number;
 }
 
-export interface articlesErrorResponse{
-    status: number;
-    message: string;
-    error: any;
+export interface technologiesInterface{
+    id: number
+    name: string
+    icon: JSX.Element
+}
+
+export interface projectsInterface{
+    id: string
+    title: string
+    description: string
+    image: string
+    linkCode: string | null
+    linkPage: string | null
+    video?: string
+    technologies: technologiesInterface[]
 }
