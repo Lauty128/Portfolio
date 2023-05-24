@@ -1,24 +1,26 @@
 //------ Models
-import { projectsInterface } from "@/models"
+import { projectsInterface, technologiesInterface } from "@/models"
 
 //------ Assets
 import { FaCode, FaEye, FaVideo, FaEyeSlash } from 'react-icons/fa'
 
 
 export function ProjectCard(project:projectsInterface):JSX.Element{
+    
+    const technologiesList = (technologies:technologiesInterface[]) => 
+                technologies.map(technology=>(  
+                    <div key={`${technology.id}`} className='Project__technology' title={technology.name}>
+                        {technology.icon}
+                    </div>
+                    ))
+    
+    
     return(
         <div className="Project" key={project.id} data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                 <div className="Project__imageContainer">
                     <img src={`${project.image}`} alt="alt de imagen" />
                     <div className="Project__technologiesContainer">
-                        {
-                        project.technologies.map(technology=>{
-                            return (  
-                            <div key={`${technology.id}`} className='Project__technology' title={technology.name}>
-                                {technology.icon}
-                            </div>
-                            )})
-                        }
+                        { technologiesList(project.technologies) }
                     </div>
                 </div>
 
