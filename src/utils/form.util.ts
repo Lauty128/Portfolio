@@ -57,7 +57,7 @@ export function sendData(values:formValuesInterface, submitButton:HTMLInputEleme
     if(!validateForm(values)){
         formError(submitButton, 'formError')
         newMessage({
-            message:'Hubo un campo que no se valido correctamente. Porfavor revise los datos',
+            message:'Se encontró un campo que no es válido. Por favor revisé los datos',
             type:'error'
         })
         return  
@@ -76,7 +76,7 @@ export function sendData(values:formValuesInterface, submitButton:HTMLInputEleme
             if(response.status == 200){
                 submitButton.classList.remove('ContactMe__submit--block')
                 newMessage({
-                    message:'Los datos fueron enviados correctamente',
+                    message:'Los datos fueron enviados correctamente.\nGracias por comunicarte',
                     type:'OK'
                 })
             }
@@ -84,7 +84,7 @@ export function sendData(values:formValuesInterface, submitButton:HTMLInputEleme
         .catch(()=>{
             submitButton.classList.remove('ContactMe__submit--block')
             newMessage({
-                message:'Ocurrio un error mientras se enviaba el mensaje. Porfavor vuelve a intentarlo mas tarde',
+                message:'Ocurrió un error mientras se enviaba el mensaje.\nPor favor vuelve a intentarlo más tarde',
                 type:'error'
             })
         })

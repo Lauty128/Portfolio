@@ -528,15 +528,20 @@
 
 /*-------------------------- Message Box*/
 .Message{
-    background-color: rgb(39, 100, 37);
-    width: 20em;
+    background-color: rgb(67, 114, 66);
+    max-width: 25em;
     padding: 1em;
     position: fixed;
     bottom: 1em;
     right: 1em;
-    transform: translateX(25em);
+    transform: translateX(30em);
     transition: transform ease-in .3s;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: flex-start;
     
+    & > svg{ width: 70px; }
     &--active{ transform: translateX(0); }
     &--error{
         background-color: rgb(104, 39, 39);

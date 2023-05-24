@@ -1,3 +1,4 @@
+//-------------- ARTICLES
 export interface articleInterface{
     id:String
     title: string;
@@ -12,12 +13,14 @@ export interface articlesOKResponse{
     total: number;
 }
 
+//-------------- SKILLS
 export interface technologiesInterface{
     id: number
     name: string
     icon: JSX.Element
 }
 
+//-------------- PROJECTS
 export interface projectsInterface{
     id: string
     title: string

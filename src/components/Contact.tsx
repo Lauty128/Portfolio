@@ -47,7 +47,7 @@ export function Contact(){
     const newMessage = (data:messageCard)=>{
         //-------- A dynamic message box is created here
         if(Message.current != null){ 
-            let p:any = Message.current.firstElementChild //Reference to <p></p>
+            let p:any = Message.current.childNodes[1]  //Reference to <p></p>
             p.textContent = data.message
 
             const messageBox = Message.current // Message Box <div></div>
@@ -55,12 +55,12 @@ export function Contact(){
                 messageBox.classList.add("Message--error")
                 messageBox.classList.add("Message--active")
 
-                setTimeout(()=>{ messageBox.classList.remove("Message--active") }, 2000)
-                setTimeout(()=>{ messageBox.classList.remove("Message--error") }, 2400)
+                setTimeout(()=>{ messageBox.classList.remove("Message--active") }, 2500)
+                setTimeout(()=>{ messageBox.classList.remove("Message--error") }, 2800)
                 return
             }
             messageBox.classList.add("Message--active")
-            setTimeout(()=>{ messageBox.classList.remove("Message--active") }, 2000)
+            setTimeout(()=>{ messageBox.classList.remove("Message--active") }, 2500)
         }
     }
 
@@ -102,6 +102,7 @@ export function Contact(){
     </form>
 
     <div className="Message" ref={Message}>
+    <svg width="50px" height="50px" strokeWidth="1.7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M11.576 1.424a.6.6 0 01.848 0l10.152 10.152a.6.6 0 010 .848L12.424 22.576a.6.6 0 01-.848 0L1.424 12.424a.6.6 0 010-.848L11.576 1.424zM12 8v4M12 16.01l.01-.011" stroke="#000000" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"></path></svg>
         <p></p>
     </div>
 
