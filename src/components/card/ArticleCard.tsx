@@ -1,8 +1,8 @@
 //----- Models
-import { articleInterface } from "@/models/data"
+import { articleInterface } from "../../models/data"
 
 //----- Utils
-import { parseTitle } from "@/utils/article.util"
+import { parseTitle } from "../../utils/article.util"
 
 
 export function ArtilceCard(article:articleInterface){

@@ -1,7 +1,7 @@
 //----- Assets
 import { FaFileAlt } from 'react-icons/fa';
-import image from '@/assets/retrato.webp';
-import cv_url from '@/assets/CV.pdf'
+import image from '../assets/retrato.webp';
+import cv_url from '../assets/CV.pdf'
 
 //----- Components
 import { MoreInfo } from './';

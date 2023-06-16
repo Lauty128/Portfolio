@@ -1,5 +1,5 @@
 //-------------- Data
-import { ProjectsData } from "@/data"
+import { ProjectsData } from "../data"
 
 //-------------- Components
 import { ProjectCard } from "."

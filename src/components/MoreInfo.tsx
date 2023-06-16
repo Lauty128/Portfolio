@@ -2,10 +2,10 @@
 import { useState, useEffect } from 'react'
 
 //---------- Models
-import { articleInterface } from "@/models/data"
+import { articleInterface } from "../models/data"
 
 //---------- Services
-import { getArticles } from "@/services/getData"
+import { getArticles } from "../services/getData"
 
 //---------- Components
 import { ArtilceCard } from '.'

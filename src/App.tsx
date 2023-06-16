@@ -1,5 +1,5 @@
 //---- Dependencies
-  import { Menu, Header, Footer } from './components';
+  import { Menu, Footer, Header } from './components/static';
   import { AboutMe, Skills, Projects, Contact } from './components';
   
 

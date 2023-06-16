@@ -1,5 +1,5 @@
 //----- Assets
-    import logo from '@/assets/logo-mini.png'
+    import logo from '../../assets/logo-mini.png'
 
 export function Menu(){
 

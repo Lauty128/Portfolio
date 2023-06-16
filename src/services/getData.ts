@@ -1,5 +1,5 @@
 //---------- Models
-import { articleInterface, articlesOKResponse } from "@/models/data"
+import { articleInterface, articlesOKResponse } from "../models/data"
 
 
 export async function getArticles(size:Number):Promise<articleInterface[] | null>{

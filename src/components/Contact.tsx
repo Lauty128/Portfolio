@@ -3,10 +3,10 @@ import { useState, useRef, FormEvent } from "react"
 
 
 //------- Models
-import { formValuesInterface, messageCard } from "@/models"
+import { formValuesInterface, messageCard } from "../models"
 
 //------- Utils
-import { sendData, validateInput } from "@/utils/form.util"
+import { sendData, validateInput } from "../utils/form.util"
 
 
 export function Contact(){

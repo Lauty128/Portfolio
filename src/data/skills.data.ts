@@ -6,7 +6,7 @@ import { FaHtml5, FaCss3Alt, FaJsSquare,
 import { SiCanva, SiVisualstudiocode, SiPhp, SiTypescript } from "react-icons/si"
 
 //-------------- Interface
-import { technologiesInterface } from "@/models"
+import { technologiesInterface } from "../models"
 
 //------------------------------------------------
 export const languages:technologiesInterface[] = [

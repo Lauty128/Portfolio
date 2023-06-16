@@ -1,8 +1,8 @@
 //------ Assets
-import { languages, tools, frameworks, technologies } from "@/data"
+import { languages, tools, frameworks, technologies } from "../data"
 
 //------ Models
-import { technologiesInterface } from "@/models"
+import { technologiesInterface } from "../models"
 
 //------ Functions
 function Technologies(data:technologiesInterface[]){

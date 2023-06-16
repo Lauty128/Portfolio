@@ -1,5 +1,5 @@
 //------ Models
-import { projectsInterface, technologiesInterface } from "@/models"
+import { projectsInterface, technologiesInterface } from "../../models"
 
 //------ Assets
 import { FaCode, FaEye, FaVideo, FaEyeSlash } from 'react-icons/fa'
