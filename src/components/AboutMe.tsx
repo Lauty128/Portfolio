@@ -1,6 +1,7 @@
 //----- Assets
 import { FaFileAlt } from 'react-icons/fa';
 import image from '@/assets/retrato.webp';
+import cv_url from '@/assets/CV.pdf'
 
 //----- Components
 import { MoreInfo } from './';
@@ -23,7 +24,7 @@ export function AboutMe(){
                     <br />
                     Tengo muchas ganas de poder comenzar mi carrera profesional, obtener experiencia y aprender mucho mas
                     </p>
-                    <a id="buttonProjects" href="https://drive.google.com/file/d/1npHZcspj1FUnwCMK7yjlynu9iIH5_NuZ/view?usp=sharing" 
+                    <a id="buttonProjects" href={cv_url} download={'CV | Lautaro Silverii.pdf'} 
                     className="AboutMe__button">
                         <div className="AboutMe__effectButton"></div>
                         <FaFileAlt />
