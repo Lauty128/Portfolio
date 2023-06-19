@@ -26,7 +26,7 @@ export const languages:technologiesInterface[] = [
         icon: FaJsSquare()
     },
     {
-        id:4,
+        id:3,
         name:"TypeScript",
         icon: SiTypescript()
     },

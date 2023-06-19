@@ -1,6 +1,9 @@
 //---- Dependencies
+  import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+//---- Components
   import { Menu, Footer, Header } from './components/static';
-  import { AboutMe, Skills, Projects, Contact } from './components';
+  import { MainLayout, BlogLayout } from './components';
   
 
 //---- Styles & assets
@@ -16,13 +19,15 @@ function App() {
 
   return (
     <>
-      <Menu />
-      <Header />
-      <AboutMe />
-      <Skills />
-      <Projects />
-      <Contact />
+    <BrowserRouter>
+        <Menu />
+        <Header />
+        <Routes>
+          <Route path='/' element={<MainLayout />} />
+          <Route path='/blog' element={<BlogLayout />} />
+        </Routes>
       <Footer />
+      </BrowserRouter>
     </>
   )
 }

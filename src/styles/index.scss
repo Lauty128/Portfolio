@@ -32,8 +32,14 @@
     &__h3{ 
         position: relative; 
         overflow: hidden; 
-        line-height: 130%;
+        line-height: 120%;
         & a{ color:#E0E0E0; text-decoration: none; user-select: none; }
+
+        &--blog{ 
+            margin-left: -.4em; 
+            background-color: #FAEDBC;
+            & a{ color: #545454; padding: .3em .5em; }
+        }
     }
     &__h3::after{
         content: "";
@@ -47,7 +53,7 @@
         transition: transform ease-in .2s;
     }
     &__h3--main a{ color: #FAEDBC }
-    &__h3:hover::after{ transform: translateX(-50%)  }
+    &__h3:hover::after{ transform: translateX(-50%)}
 
     // --------------- BUTTON
     &__button{
@@ -172,6 +178,7 @@
             flex-direction: column;
             padding: 1em 0;
         }
+        &__h3--blog{  margin-left: 0;  background-color: transparent; & > a{ color: #FAEDBC; padding: 0 } }
         &__h3::after{ width: 100%; left: 0; transform-origin: left; transform: scaleX(0); }
         &__h3:hover::after{ transform: scaleX(1)  }
         
