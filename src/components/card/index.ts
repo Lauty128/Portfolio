@@ -1,2 +1,2 @@
-export * from './ArticleCard';
+export * from './MiniArticleCard';
 export * from './ProjectCard';

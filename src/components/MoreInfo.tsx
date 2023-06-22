@@ -1,5 +1,6 @@
-//---------- Models
-import { useState, useEffect } from 'react'
+//---------- Dependencies
+import { useEffect } from 'react'
+import { useArticlesStore, usePagesStore } from '@/store'
 
 //---------- Models
 import { articleInterface } from "../models/data"
@@ -9,6 +10,7 @@ import { getArticles } from "../services/getData"
 
 //---------- Components
 import { ArtilceCard } from '.'
+import { Link } from 'react-router-dom'
 
 
 function articlesList(articles:articleInterface[] | null):any{
@@ -24,18 +26,21 @@ function articlesList(articles:articleInterface[] | null):any{
         }) 
     }
 
-    return articles.map(article=> ArtilceCard(article) )
+    return articles.slice(0,3).map(article=> ArtilceCard(article))
 }
 
 export function MoreInfo(){
-
-    const [articles, setArticles] = useState<articleInterface[] | null>(null)
+    //----- States
+    const { articles, setArticles } = useArticlesStore()
+    const { change_is_inicio } = usePagesStore()
 
     useEffect(()=>{
-        (async()=>{
-            const data:articleInterface[] | null = await getArticles(3)
-            setArticles(data)
-        })()
+        if(articles === null){
+            (async()=>{
+                const data = await getArticles()
+                if(data) setArticles(0);
+            })()
+        }
     },[])
 
     return (
@@ -44,14 +49,14 @@ export function MoreInfo(){
             <h2 className="MoreInfo__title">MAS INFORMACION</h2>
             <p className="MoreInfo__text">Como dije anteriormente, ingrese en el mundo de la programación de manera totalmente autodidacta, aprendiendo de videos, foros y muchos errores 😁.  <br />
             Primero realicé algunos proyectos con HTML, CSS y JavaScript puro hasta poder tener un dominio bastante avanzado, luego comenzó a llamarme la atención NodeJS y comencé a trabajar con él, junto a ExpressJS, con el fin de crear mi propio servidor. <br />
-            En el 2022 me di cuenta de que me interesaba más el lado del front-end, por lo que comencé a trabajar con React, con el cual sigo aprendiendo e informándome de cosas nuevas. Justo este proyecto está realizado con React y TypeScript, utilizando Vite para crear el proyecto ya configurado. <br />
-            Con el fin de poder seguir trabajando sobre React, comencé a trabajar con NextJs, en su versión 13, y, con el cual, pude crear mi propio blog. <br />
-            Si tienes interés sobre el blog puedes entrar y conocer un poco más.
+            Hoy en día trabajo enfocado en el front-end, utilizando herramientas como React y Sass para poder agilizar el desarrollo de sitios web, así como otras herramientas que permiten organizar mi trabajo, como lo es Typescript. <br />
+            Cuento con un blog, donde subo contenido interesante, ya sea de programación o de algún otro tema de interés personal. Anteriormente se encontraba en otro lado, pero por ciertas cuestiones ahora lo tengo junto al portafolio. <br />
+            Puedes entrar y conocer un poco más haciendo click aquí.
             </p>
             
-            <a className="MoreInfo__button" href={import.meta.env.VITE_BLOG_URL}>
+            <Link className="MoreInfo__button" to={'/blog'} onClick={() => change_is_inicio(false)}>
                 ECHALE UN VISTAZO!
-            </a>
+            </Link>
         </div>
 
         <div className="MoreInfo__aside">
