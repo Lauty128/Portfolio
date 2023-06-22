@@ -11,14 +11,14 @@ interface articlesStoreInterface{
     articles: articleInterface[] | null
     pagination: paginationInterface
 
-    setArticle: (page:number) => Promise<void>
+    setArticles: (page:number) => Promise<void>
 }
 
-export const useVehiclesStore = create<articlesStoreInterface>((set) => ({
+export const useArticlesStore = create<articlesStoreInterface>((set) => ({
     articles: null,
     pagination: { size:7, page:0, total:0 },
 
-    setArticle: async(page:number)=>{
+    setArticles: async(page:number)=>{
         const data = await getArticles(7,page)
         set(state=>({
             pagination:{ ...state.pagination, page, total: data ? data.total : 0 },
