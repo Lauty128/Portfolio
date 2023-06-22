@@ -24,6 +24,19 @@
     position: fixed;
     z-index: 10;
 
+    //--------------- BLOG
+    &--blog{
+        justify-content: left;
+        padding: .5em 1em;
+        
+        &__link{
+            display: flex;
+            align-items: center;
+            gap: .4em;
+            & > span{ color: #FAEDBC }
+        }
+    }
+
     // --------------- IMG   
     &__image{ width: 5em }
 
@@ -196,6 +209,10 @@
     .Header__h1{ font-size: 2em }
     .Header__h3{ font-size: 1.1em; margin-top: .5em }
 }
+
+//-----------------------------------------------------------------------------------------------
+//----------------------------------------- HOME PAGE -------------------------------------------
+//-----------------------------------------------------------------------------------------------
 
 //--------------------------------------------
 //---------------- ABOUT ME ------------------
@@ -540,25 +557,72 @@
     100%{ transform:rotateZ( .5deg); }
 }
 
-/*-------------------------- Message Box*/
-.Message{
-    background-color: rgb(67, 114, 66);
-    max-width: 25em;
-    padding: 1em;
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    transform: translateX(30em);
-    transition: transform ease-in .3s;
+//-----------------------------------------------------------------------------------------------
+//----------------------------------------- BLOG PAGE -------------------------------------------
+//-----------------------------------------------------------------------------------------------
+.Blog{
     display: flex;
-    gap: 1em;
-    align-items: center;
-    justify-content: flex-start;
-    
-    & > svg{ width: 70px; }
-    &--active{ transform: translateX(0); }
-    &--error{
-        background-color: rgb(104, 39, 39);
+    gap: 10%;
+    padding: 0 .5em;
+    position: relative;
+    margin-top: 2em;
+
+    &__h2{
+        color: #FAEDBC;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        position: relative;
+        width: fit-content;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -.1em;
+            right: -1.1em;
+            width: 70%;
+            height: 2.5px;
+            background-color: #FAEDBC;
+            border-radius: 30px;
+        }
     }
+
+    &__filtersSection{
+        padding-left: 1em;
+    }
+
+    &__filtersContainer{
+        display: flex;
+        gap: 1.5em .5em;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (max-width:850px) {
+        &{
+            flex-direction: column;
+
+            &__h2--filters{ margin-bottom: 1em }
+            &__filtersSection{ margin-bottom: 2em }
+        }
+    }
+
+    // &::after{
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     left: 30%;
+    //     height: 100%;
+    //     width: 1.5px;
+    //     background-color: rgb(126, 126, 126);
+    // }
+}
+
+.FilterCard{
+    padding: .3em;
+    width: fit-content;
+    font-size: .8em;
+    background-color: #FAEDBC;
+    color: #3d3d3d;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
