@@ -5,12 +5,19 @@ export interface articleInterface{
     image: string;
     createdAt: string;
     alt: string;
+    category:{ id:string, name:string }
 }
 
 export interface articlesOKResponse{
     status: number;
     data: articleInterface[];
     total: number;
+}
+
+export interface paginationInterface{
+    page: number
+    total: number
+    size: number
 }
 
 //-------------- SKILLS
