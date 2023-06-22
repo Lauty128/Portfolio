@@ -1,19 +1,18 @@
 //----- Dependencies
-    import { useState } from 'react';
+    import { usePagesStore } from '@/store';
     import { Link } from 'react-router-dom'
 
 //----- Assets
-    import logo from '../../assets/logo-mini.png'
+    import logo from '@/assets/logo-mini.png'
 
-
+    
 
 export function Menu(){
     //-------------------- State
-    const [is_inicio, set_is_inicio] = useState<boolean>((window.location.pathname === '/'))
+    const { is_inicio, change_is_inicio } = usePagesStore()
     
     //-------------------- Menu Button
     const toggleButton = (e:any)=>{
-        if(e.target.textContent === 'BLOG') set_is_inicio(false)
         if(window.innerWidth > 700) return;
 
         let target = e.target
@@ -54,12 +53,15 @@ export function Menu(){
                     <a onClick={toggleButton} href="#ContactMe">CONTACTAME</a>
                 </h3>
                 <h3 className="Menu__h3 Menu__h3--blog">
-                    <Link onClick={toggleButton} to={"/blog"}>BLOG</Link>
+                    <Link onClick={()=> change_is_inicio(false)} to={"/blog"}>BLOG</Link>
                 </h3>
             </div>
         </nav>
         :   
-        <Link onClick={()=> set_is_inicio(true)} to={'/'}>
+        <div className='Menu Menu--blog'>
+        <Link onClick={()=> change_is_inicio(true)} to={'/'} className='Menu--blog__link'>
+            <svg width="24px" height="24px" strokeWidth="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#FAEDBC"><path d="M16 12H8m0 0l3.5 3.5M8 12l3.5-3.5M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="#FAEDBC" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path></svg>
             <span>VOLVER A INICIO</span>
         </Link>  
+        </div>
 )}
