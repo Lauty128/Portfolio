@@ -22,7 +22,7 @@
     color: #E0E0E0;
     background-color: #545454;
     position: fixed;
-    z-index: 10;
+    z-index: 9;
 
     //--------------- BLOG
     &--blog{
@@ -614,6 +614,16 @@
     //     width: 1.5px;
     //     background-color: rgb(126, 126, 126);
     // }
+    &__pagination{
+        margin-bottom: 2em;
+        
+        & > span{ 
+            color: #E0E0E0;
+            margin-left: .3em;
+            font-size: 2em;
+            cursor: pointer;
+        }
+    }
 }
 
 .FilterCard{

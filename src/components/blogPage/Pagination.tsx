@@ -7,25 +7,27 @@ export default function Pagination(){
     const { setArticles, pagination } = useArticlesStore()
 
     //---- Functions
-    function changePage(num:number){
-        const newPage = pagination.page + num
-        setArticles(newPage)
+    function LoadPages():JSX.Element[]{
+        //---- An array is created with random values
+        const quantityPages = Array.from({length: Math.ceil(pagination.total/pagination.size)}, () => Math.floor(Math.random() * 10));
+
+        return quantityPages.map((_element, index)=>{
+            console.log(index);
+            return(
+                (pagination.page === index)
+                ? <span key={index} style={{color:'#FAEDBC'}}>{ index + 1 }</span>
+                : <span key={index} onClick={()=> setArticles(index)}>{ index + 1 }</span>
+            )
+        })
     }
 
     return (
         <div className="Blog__pagination">
-            {
-                (pagination.page > 0)
-                ? <span onClick={() => changePage(-1)}>{ '<' }</span>
-                : ''
+            { 
+                (pagination.total == 0)
+                ? <span>0</span> 
+                : LoadPages()
             }
-            <span>{ pagination.page + 1 }</span>
-            {
-                (((pagination.page + 1) * pagination.size) < pagination.total)
-                ? <span onClick={() => changePage(1)}>{'>'}</span>
-                : ''
-            }
-            
         </div>
     )
 }
