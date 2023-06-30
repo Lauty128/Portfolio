@@ -10,9 +10,10 @@
 
 //------- Components
 import { Pagination } from "."
+import { Link } from "react-router-dom"
 
 //------- Utils
-    import { parseTitle } from "@/utils/article.util"
+import { parseTitle } from "@/utils/article.util"
 
 
 export default function Articles(){
@@ -20,7 +21,8 @@ export default function Articles(){
     const { articles, setArticles } = useArticlesStore()
 
     useEffect(()=>{
-        if(articles === null){
+        console.log(articles);
+        if(!articles){
             (async()=>{
                 const data = await getArticles()
                 if(data) setArticles(0);
@@ -56,7 +58,7 @@ export default function Articles(){
                     <h4 className={`ArticleCard__title ${(article.title.length > 25) ? "ArticleCard__title--long" : ''}`} title={ article.title }>{ article.title }</h4>
                     <div className="ArticleCard__extraInfo">
                         <span className="ArticleCard__category">{ article.category.name }</span>
-                        <a href={`/blog/${url}`} className="ArticleCard__moreInfo">Leer mas</a>
+                        <Link to={`/blog/${url}`} className="ArticleCard__moreInfo">Leer mas</Link>
                     </div>
                 </div>
             </article>

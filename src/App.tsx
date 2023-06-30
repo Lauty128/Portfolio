@@ -4,7 +4,7 @@
 
 //---- Components
   import { Menu, Footer, Header } from './components/static';
-  import { MainLayout, BlogLayout } from './components';
+  import { MainLayout, BlogLayout, ArticleLayout } from './components';
   
 
 //---- Styles & assets
@@ -35,6 +35,7 @@ function App() {
           <Routes>
             <Route path='/' element={<MainLayout />} />
             <Route path='/blog' element={<BlogLayout />} />
+            <Route path='/blog/:title' element={<ArticleLayout />} />
           </Routes>
         <Footer />
       </BrowserRouter>

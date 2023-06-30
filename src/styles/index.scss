@@ -266,8 +266,8 @@
         transition: transform linear .3s;
     }
     .AboutMe__button:hover .AboutMe__effectButton{ transform: scaleX(4); }
-    .AboutMe__h4{ margin-left: .5em; z-index: 10 }
-    .AboutMe__button svg{ margin: 0; z-index: 10 }
+    .AboutMe__h4{ margin-left: .5em; z-index: 10; color: #3d3d3d; }
+    .AboutMe__button svg{ margin: 0; z-index: 10; color: #3d3d3d; }
 }
 
 //---------------------------------------------
@@ -289,6 +289,7 @@
         width: fit-content;
         font-size: 1.2em;
         background-color: #FAEDBC;
+        color: #3d3d3d;
         padding: .5em;
         box-shadow: 0 1px 5px rgba(0,0,0,0.4);
         transition: box-shadow linear .2s;
@@ -434,6 +435,7 @@
             display: flex; 
             align-items: center;
             gap: .3em; 
+            color: #3d3d3d;
         }
         &--noAvailable{ background-color: rgb(199, 198, 198) }
         &--noAvailable a{ color: rgb(70, 70, 70) }
@@ -562,7 +564,7 @@
 //-----------------------------------------------------------------------------------------------
 .Blog{
     display: flex;
-    gap: 10%;
+    gap: 8%;
     padding: 0 .5em;
     position: relative;
     margin-top: 2em;
@@ -605,15 +607,6 @@
         }
     }
 
-    // &::after{
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 30%;
-    //     height: 100%;
-    //     width: 1.5px;
-    //     background-color: rgb(126, 126, 126);
-    // }
     &__pagination{
         margin-bottom: 2em;
         
@@ -623,6 +616,7 @@
             font-size: 2em;
             cursor: pointer;
         }
+        & > span:hover{ color: #FAEDBC; }
     }
 }
 
@@ -636,3 +630,50 @@
     cursor: pointer;
 }
 
+
+.ArticleData{
+    padding: 2em 3em;
+    position: relative;
+
+    &__comeBack{
+        position: absolute;
+        top: 0em;
+        right: 1em;
+        font-size: 1.3em;
+        color: #FAEDBC;
+        cursor: pointer;
+
+        & > svg{ vertical-align: text-bottom; margin-right: .3em; }
+    }
+
+    &__date{
+        color: #afafaf;
+        & > svg{ vertical-align: bottom; margin-right: .5em; }
+    }
+    &__title{ color: #E0E0E0; font-size: 2.5em; margin-bottom: .4em; }
+    &__category{ background-color: #FAEDBC; padding: .3em; font-size: .9em; color: #3d3d3d }
+
+    &__content{ margin-top: 4em }
+    &__content h3{ margin-top: 1.4em }
+    &__content a{ color: #cccccc }
+    &__content *{ font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
+    &__content blockquote{ margin:0; background-color: #444444; padding: .3em .3em .3em 2em }
+    &__content img{ max-width: 100% }
+    &__content code{ padding: .5em; width: 100% }
+    &__content pre{ 
+        background-color: #3d3d3d; 
+        color: #c2c2c2; 
+        padding: .5em; 
+        max-width: 100%; 
+        overflow-x: scroll; 
+        
+        &::-webkit-scrollbar { height: 12px }
+        &::-webkit-scrollbar-track { background: #3d3d3d }
+        &::-webkit-scrollbar-thumb {
+            background-color: #2b2b2b;    
+            border-radius: 20px;      
+            border: 3px solid #3d3d3d;  
+        }
+    }
+
+}

@@ -12,7 +12,7 @@ export default function Pagination(){
         const quantityPages = Array.from({length: Math.ceil(pagination.total/pagination.size)}, () => Math.floor(Math.random() * 10));
 
         return quantityPages.map((_element, index)=>{
-            console.log(index);
+            
             return(
                 (pagination.page === index)
                 ? <span key={index} style={{color:'#FAEDBC'}}>{ index + 1 }</span>

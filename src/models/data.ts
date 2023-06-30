@@ -1,4 +1,4 @@
-//-------------- ARTICLES
+//-------------- ARTICLE
 export interface articleInterface{
     id:String
     title: string;
@@ -8,6 +8,23 @@ export interface articleInterface{
     category:{ id:string, name:string }
 }
 
+export interface fullArticleInterface extends articleInterface{
+    content: string;
+    imageContribution: string | null;
+    createdBy:{
+        id:string;
+        name:string;
+        image:string | null;
+    }
+}
+
+export interface articleOKResponse{
+    status: number;
+    data: fullArticleInterface;
+    message: string | undefined
+}
+
+//-------------- ARTICLES
 export interface articlesOKResponse{
     status: number;
     data: articleInterface[];
