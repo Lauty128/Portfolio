@@ -13,7 +13,7 @@ import { ArtilceCard } from '.'
 import { Link } from 'react-router-dom'
 
 
-function articlesList(articles:articleInterface[] | null):any{
+function articlesList(articles:articleInterface[] | null, change_is_inicio: (actualState: boolean) => void):any{
     if(articles == null){
         return [0,1,2].map(element=>{
             return  <div className="ArticlePreload" key={element}>
@@ -26,7 +26,7 @@ function articlesList(articles:articleInterface[] | null):any{
         }) 
     }
 
-    return articles.slice(0,3).map(article=> ArtilceCard(article))
+    return articles.slice(0,3).map(article=> ArtilceCard(article, change_is_inicio))
 }
 
 export function MoreInfo(){
@@ -62,7 +62,7 @@ export function MoreInfo(){
         <div className="MoreInfo__aside">
             <div className="MoreInfo__articlesContainer">
                 <h2 className="MoreInfo__articlesTitle">ULTIMOS POST</h2>
-                { articlesList(articles) }
+                { articlesList(articles, change_is_inicio) }
             </div>
         </div>
     </div>
