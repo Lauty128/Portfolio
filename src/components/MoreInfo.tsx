@@ -31,11 +31,11 @@ function articlesList(articles:articleInterface[] | null, change_is_inicio: (act
 
 export function MoreInfo(){
     //----- States
-    const { articles, setArticles } = useArticlesStore()
+    const { articles, setArticles, pagination } = useArticlesStore()
     const { change_is_inicio } = usePagesStore()
 
     useEffect(()=>{
-        if(articles === null){
+        if(articles === null || pagination.page > 0){
             (async()=>{
                 const data = await getArticles()
                 if(data) setArticles(0);

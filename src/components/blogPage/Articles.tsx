@@ -21,8 +21,7 @@ export default function Articles(){
     const { articles, setArticles } = useArticlesStore()
 
     useEffect(()=>{
-        console.log(articles);
-        if(!articles){
+        if(articles == null){
             (async()=>{
                 const data = await getArticles()
                 if(data) setArticles(0);
