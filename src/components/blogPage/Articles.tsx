@@ -23,6 +23,7 @@ export default function Articles(){
     useEffect(()=>{
         if(articles == null){
             (async()=>{
+                // Store in sesion-storage the first page of articles 
                 const data = await getArticles()
                 if(data) setArticles(0);
             })()

@@ -37,6 +37,7 @@ export function MoreInfo(){
     useEffect(()=>{
         if(articles === null || pagination.page > 0){
             (async()=>{
+                // Store in sesion-storage the first page of articles 
                 const data = await getArticles()
                 if(data) setArticles(0);
             })()

@@ -57,6 +57,10 @@ export function ProjectCard(project:projectsInterface):JSX.Element{
                           </button>
                         : ""
                     }
+                    { project.in_process
+                        ? <span style={{display:'block', marginTop:'20px', fontSize:'1.2em', color:'#FAEDBC'}}>Trabajando Actualmente..</span>
+                        : ''
+                    }
                 </div>
             </div>
     )

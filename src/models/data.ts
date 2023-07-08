@@ -54,4 +54,5 @@ export interface projectsInterface{
     linkPage: string | null
     video?: string
     technologies: technologiesInterface[]
+    in_process?: boolean
 }

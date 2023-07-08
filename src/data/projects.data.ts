@@ -1,7 +1,7 @@
 //-------------- Icons
 import { FaHtml5, FaCss3Alt, FaJsSquare, 
     FaNodeJs, FaReact, FaSass } from "react-icons/fa"
-import { SiTypescript, SiJson, SiMongodb, SiNextdotjs } from "react-icons/si"
+import { SiTypescript, SiJson, SiMongodb, SiNextdotjs, SiPhp } from "react-icons/si"
 import { HiTemplate } from "react-icons/hi"
 
 //--------------- interface
@@ -9,6 +9,37 @@ import { projectsInterface } from "../models"
 
 
 export const ProjectsData:projectsInterface[] = [
+    {
+        id:"fH36dr52y7",
+        title:"Sitio web para consultora",
+        description:"Este proyecto permite crear, visualizar y modificar archivos .csv de manera rápida y sencilla. También se puede crear una tabla de frecuencias agrupadas en intervalos, mediante los datos proporcionados, dependiendo la amplitud o cantidad de clases deseadas.\nEsta desarrollado con NodeJS, usando Express. El cliente trabaja con EJS y LayoutsEJS.",
+        image:"https://res.cloudinary.com/dyrpgj8od/image/upload/v1688832225/Portfolio/consultora_emsiac.png",
+        linkCode:"https://github.com/Lauty128/Site-for-consultancy",
+        linkPage:'https://lautarosilverii.000webhostapp.com/',
+        in_process: true,
+        technologies: [
+            {
+                id: 0,
+                name: "HTML",
+                icon: FaHtml5()
+            },
+            {
+                id: 1,
+                name: "Sass",
+                icon: FaSass()
+            },
+            {
+                id: 2,
+                name: "JavaScript",
+                icon: FaJsSquare()
+            },
+            {
+                id: 3,
+                name: "PHP",
+                icon: SiPhp()
+            }
+        ]
+    },
     {
         id:"2f46dru2y4",
         title:"CSV Translator",
