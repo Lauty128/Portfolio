@@ -23,7 +23,7 @@ export function AboutMe(){
                     <br />
                     Puedes descargar mi curriculum y echarle un vistazo.
                     </p>
-                    <a id="buttonProjects" href='https://drive.google.com/file/d/1npHZcspj1FUnwCMK7yjlynu9iIH5_NuZ/view?usp=sharing' 
+                    <a id="buttonProjects" href='https://drive.google.com/file/d/1-Lh-_OtR0o8yPiTwcfWB5dI9AWIWVJb_/view?usp=sharing' 
                     className="AboutMe__button">
                         <div className="AboutMe__effectButton"></div>
                         <FaFileAlt />
