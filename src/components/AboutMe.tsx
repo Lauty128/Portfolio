@@ -16,12 +16,12 @@ export function AboutMe(){
                 <div className="AboutMe__textContainer">
                     <h3 className="AboutMe__h3">SOBRE MI</h3>
                     <p className="AboutMe__p">
-                    Hola, mi nombre es Lautaro, tengo 20 años y estoy en busca de mi primer trabajo como desarrollador web. 
+                    Hola, mi nombre es Lautaro y te doy la bienvenida a mi espacio virtual. Soy un desarrollador web autodidacta apasionado por la creacion e innovacion. Actualmente me encuentro en la busqueda de mi primera experiencia laboral y seria un honor poder apotar para el exito de quienes confien en mi y me den una oportunidad. 
                     <br />
-                    Comencé en este mundo de la programación de manera autodidacta, obteniendo información y aprovechando cualquier oportunidad para poder aprender algo nuevo. 
+                    Mi viaje en el mundo del desarrollo web ha sido un recorrido de autodescubrimiento y superación constante mediante desafios interesantes. 
                     <br />
                     <br />
-                    Tengo muchas ganas de poder comenzar mi carrera profesional, obtener experiencia y aprender mucho mas
+                    Puedes descargar mi curriculum y echarle un vistazo.
                     </p>
                     <a id="buttonProjects" href='https://drive.google.com/file/d/1npHZcspj1FUnwCMK7yjlynu9iIH5_NuZ/view?usp=sharing' 
                     className="AboutMe__button">

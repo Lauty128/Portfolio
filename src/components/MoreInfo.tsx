@@ -48,12 +48,23 @@ export function MoreInfo(){
     <div className="MoreInfo">
         <div className="MoreInfo__textContainer">
             <h2 className="MoreInfo__title">MAS INFORMACION</h2>
-            <p className="MoreInfo__text">Como dije anteriormente, ingrese en el mundo de la programación de manera totalmente autodidacta, aprendiendo de videos, foros y muchos errores 😁.  <br />
-            Primero realicé algunos proyectos con HTML, CSS y JavaScript puro hasta poder tener un dominio bastante avanzado, luego comenzó a llamarme la atención NodeJS y comencé a trabajar con él, junto a ExpressJS, con el fin de crear mi propio servidor. <br />
-            Hoy en día trabajo enfocado en el front-end, utilizando herramientas como React y Sass para poder agilizar el desarrollo de sitios web, así como otras herramientas que permiten organizar mi trabajo, como lo es Typescript. <br />
-            Cuento con un blog, donde subo contenido interesante, ya sea de programación o de algún otro tema de interés personal. Anteriormente se encontraba en otro lado, pero por ciertas cuestiones ahora lo tengo junto al portafolio. <br />
-            Puedes entrar y conocer un poco más haciendo click aquí.
-            </p>
+            <div className="MoreInfo__text">
+                <p>
+                    Como dije anteriormente, ingrese en el mundo de la programación de manera totalmente autodidacta, aprendiendo a traves de videos, foros y muchos errores 😁.
+                </p>
+                <p>
+                    Hice mis primeros pasos realizando algunos proyectos con HTML, CSS y JavaScript puro hasta poder tener un dominio bastante avanzado, luego comenzó a llamarme la atención NodeJS y comencé a trabajar con él, junto a ExpressJS, con el fin de crear mi propio servidor.
+                </p>
+                <p>
+                    Hoy en día trabajo enfocado en el front-end, utilizando herramientas como React y Sass para poder agilizar el desarrollo, así como otras herramientas que permiten organizar mi trabajo, como lo es Typescript. <br />
+                </p>
+                <p>
+                    Este portafolio es un reflejo de mi viaje, mis logros y mis aspiraciones. Te invito a explorar mis proyectos, leer mis artículos y conocer más sobre mi enfoque hacia el desarrollo web. Si estás interesado en colaborar en proyectos emocionantes, aprender juntos o simplemente entablar una conversación sobre la tecnología, estaré encantado de hacerlo. <br />
+                </p>
+                <p>
+                    Puedes entrar y conocer un poco más haciendo click aquí.
+                </p>
+            </div>
             
             <Link className="MoreInfo__button" to={'/blog'} onClick={() => change_is_inicio(false)}>
                 ECHALE UN VISTAZO!
