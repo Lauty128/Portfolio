@@ -9,7 +9,7 @@ import { SiCanva, SiVisualstudiocode, SiPhp, SiTypescript } from "react-icons/si
 import { technologiesInterface } from "../models"
 
 //------------------------------------------------
-export const languages:technologiesInterface[] = [
+export const technologies:technologiesInterface[] = [
     {
         id:0,
         name:"Html",
@@ -27,11 +27,26 @@ export const languages:technologiesInterface[] = [
     },
     {
         id:3,
+        name:"NodeJS",
+        icon: FaNodeJs()
+    },
+    {
+        id:4,
+        name:"ReactJS",
+        icon: FaReact()
+    },
+    {
+        id:5,
+        name:"Sass",
+        icon: FaSass()
+    },
+    {
+        id:6,
         name:"TypeScript",
         icon: SiTypescript()
     },
     {
-        id:4,
+        id:7,
         name:"PHP",
         icon: SiPhp()
     }
@@ -52,47 +67,20 @@ export const tools:technologiesInterface[] = [
         id:2,
         name:"Canva",
         icon: SiCanva()
-    }
-]
-
-export const frameworks:technologiesInterface[] = [
-    {
-        id:0,
-        name:"NodeJS",
-        icon: FaNodeJs()
     },
     {
-        id:1,
-        name:"ReactJS",
-        icon: FaReact()
-    },
-    {
-        id:2,
-        name:"Sass",
-        icon: FaSass()
-    }
-
-]
-
-export const technologies:technologiesInterface[] = [
-    {
-        id:0,
+        id:3,
         name:"Npm",
         icon: FaNpm()
     },
     {
-        id:1,
+        id:4,
         name:"VsCode",
         icon: SiVisualstudiocode()
     },
     {
-        id:2,
+        id:5,
         name:"Git",
         icon: FaGitAlt()
     }
 ]
-
-
-
-
-

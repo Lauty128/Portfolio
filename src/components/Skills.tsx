@@ -1,5 +1,5 @@
 //------ Assets
-import { languages, tools, frameworks, technologies } from "../data"
+import { tools, technologies } from "../data"
 
 //------ Models
 import { technologiesInterface } from "../models"
@@ -19,8 +19,8 @@ export function Skills():JSX.Element{
         <section className="Skills" id="Skills">
 
             <div className="Skills__container" data-aos="zoom-out-up" data-aos-duration="600"> 
-                <h2 className="Skills__h2">LENGUAJES</h2>
-                { Technologies(languages) }
+                <h2 className="Skills__h2">TECNOLOGIAS</h2>
+                { Technologies(technologies) }
             </div>
 
             <div className="Skills__container" data-aos="zoom-out-up" data-aos-duration="600">
@@ -28,7 +28,7 @@ export function Skills():JSX.Element{
                 { Technologies(tools) }
             </div>
 
-            <div className="Skills__container" data-aos="zoom-out-up" data-aos-duration="600">
+            {/* <div className="Skills__container" data-aos="zoom-out-up" data-aos-duration="600">
                 <h2 className="Skills__h2 Skills__h2--framework">FRAMEWORKS & LIBRERIAS</h2>
                 { Technologies(frameworks) }
             </div>
@@ -36,7 +36,7 @@ export function Skills():JSX.Element{
             <div className="Skills__container" data-aos="zoom-out-up" data-aos-duration="600"> 
                 <h2 className="Skills__h2">TECNOLOGIAS</h2>
                 { Technologies(technologies) }
-            </div>
+            </div> */}
 
         </section>
     )
