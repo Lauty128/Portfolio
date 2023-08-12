@@ -49,7 +49,7 @@ export interface projectsInterface{
     id: string
     title: string
     description: string
-    image: string
+    images: string[]
     linkCode: string | null
     linkPage: string | null
     video?: string
