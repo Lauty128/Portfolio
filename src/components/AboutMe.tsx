@@ -2,10 +2,6 @@
 import { FaFileAlt } from 'react-icons/fa';
 import image from '../assets/retrato.webp';
 
-//----- Components
-import { MoreInfo } from './';
-
-
 export function AboutMe(){
     return (
     <section id="AboutMe" className="AboutMe">
@@ -31,8 +27,6 @@ export function AboutMe(){
                     </a>
                 </div>
             </div>
-
-            <MoreInfo />
     </section>
     )
 } 

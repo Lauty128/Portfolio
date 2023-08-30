@@ -4,6 +4,5 @@ export * from './Layout';
 export * from './MoreInfo';
 export * from './Projects';
 export * from './Skills';
-export * from './blogPage';
 export * from './card';
 export * from './static';

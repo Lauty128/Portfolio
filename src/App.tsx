@@ -1,11 +1,9 @@
 //---- Dependencies
-  import { BrowserRouter, Routes, Route } from 'react-router-dom';
   import { useEffect } from 'react';
 
 //---- Components
   import { Menu, Footer, Header } from './components/static';
-  import { MainLayout, BlogLayout, ArticleLayout } from './components';
-  
+  import { MainLayout } from './components';
 
 //---- Styles & assets
   import './styles/index.scss'
@@ -29,16 +27,10 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-          <Menu />
-          <Header />
-          <Routes>
-            <Route path='/' element={<MainLayout />} />
-            <Route path='/blog' element={<BlogLayout />} />
-            <Route path='/blog/:title' element={<ArticleLayout />} />
-          </Routes>
+        <Menu />
+        <Header />
+        <MainLayout />
         <Footer />
-      </BrowserRouter>
     </>
   )
 }
