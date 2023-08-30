@@ -2,14 +2,37 @@
 import { FaHtml5, FaCss3Alt, FaJsSquare, 
     FaNodeJs, FaReact, FaSass,
     FaFigma, FaGitAlt, FaNpm,
-    FaBuffer  } from "react-icons/fa"
-import { SiCanva, SiVisualstudiocode, SiPhp, SiTypescript } from "react-icons/si"
+    FaBuffer, FaBootstrap  } from "react-icons/fa"
+import { SiCanva, SiVisualstudiocode, SiPhp, SiTypescript, SiMysql, SiSequelize, SiMongodb } from "react-icons/si"
 
 //-------------- Interface
 import { technologiesInterface } from "../models"
 
 //------------------------------------------------
 export const technologies:technologiesInterface[] = [
+    {
+        id:0,
+        name:"NodeJS",
+        icon: FaNodeJs()
+    },
+    {
+        id:1,
+        name:"ReactJS",
+        icon: FaReact()
+    },
+    {
+        id:2,
+        name:"Sass",
+        icon: FaSass()
+    },
+    {
+        id:3,
+        name:"Bootstrap",
+        icon: FaBootstrap()
+    }
+]
+
+export const languages:technologiesInterface[] = [
     {
         id:0,
         name:"Html",
@@ -27,28 +50,44 @@ export const technologies:technologiesInterface[] = [
     },
     {
         id:3,
-        name:"NodeJS",
-        icon: FaNodeJs()
-    },
-    {
-        id:4,
-        name:"ReactJS",
-        icon: FaReact()
-    },
-    {
-        id:5,
-        name:"Sass",
-        icon: FaSass()
-    },
-    {
-        id:6,
         name:"TypeScript",
         icon: SiTypescript()
     },
     {
-        id:7,
+        id:4,
         name:"PHP",
         icon: SiPhp()
+    }
+]
+
+export const design:technologiesInterface[] = [
+    {
+        id:0,
+        name:"Figma",
+        icon: FaFigma()
+    },
+    {
+        id:1,
+        name:"Canva",
+        icon: SiCanva()
+    }
+]
+
+export const dataBases:technologiesInterface[] = [
+    {
+        id:0,
+        name:"MYSQL",
+        icon: SiMysql()
+    },
+    {
+        id:1,
+        name:"MongoDB",
+        icon: SiMongodb()
+    },
+    {
+        id:2,
+        name:"Sequelize",
+        icon: SiSequelize()
     }
 ]
 
@@ -58,16 +97,7 @@ export const tools:technologiesInterface[] = [
         name:"Recursos Web",
         icon: FaBuffer()
     },
-    {
-        id:1,
-        name:"Figma",
-        icon: FaFigma()
-    },
-    {
-        id:2,
-        name:"Canva",
-        icon: SiCanva()
-    },
+    
     {
         id:3,
         name:"Npm",
