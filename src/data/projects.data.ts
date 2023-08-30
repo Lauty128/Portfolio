@@ -97,7 +97,7 @@ export const ProjectsData:projectsInterface[] = [
         description:"Esta API esta desarrollada con Express. Se utiliza una base de datos SQL para almacenar la informacion y un ORM, en este caso sequelize, para administrar la base de datos.\r\nEl contenido de los articulos se almacena en formato Markdown y luego el codigo es formateado en el cliente para ser mostrado en la pagina.",
         images:["https://res.cloudinary.com/dyrpgj8od/image/upload/v1692212958/Portfolio/blog_api_xuruwn.png"],
         linkCode: "https://github.com/Lauty128/Blog",
-        linkPage: "https://www.lautarosilverii.blog",
+        linkPage: null,
         technologies: [
             {
                 id: 0,
