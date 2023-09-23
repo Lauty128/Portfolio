@@ -1,6 +1,6 @@
 //----- Assets
 import { FaFileAlt } from 'react-icons/fa';
-import image from '../assets/retrato.webp';
+import image from '../assets/profile.webp';
 
 export function AboutMe(){
     return (
@@ -23,7 +23,7 @@ export function AboutMe(){
                     className="AboutMe__button">
                         <div className="AboutMe__effectButton"></div>
                         <FaFileAlt />
-                        <h4 className="AboutMe__h4">DESCARGAR CV</h4>
+                        <h4 className="AboutMe__h4">Descargar CV</h4>
                     </a>
                 </div>
             </div>

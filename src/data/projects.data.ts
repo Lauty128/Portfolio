@@ -1,7 +1,7 @@
 //-------------- Icons
 import { FaHtml5, FaCss3Alt, FaJsSquare, 
     FaNodeJs, FaReact, FaSass } from "react-icons/fa"
-import { SiTypescript, SiJson, SiMysql, SiMarkdown, SiPhp, SiSequelize } from "react-icons/si"
+import { SiTypescript, SiJson, SiMysql, SiMarkdown, SiPhp, SiGatsby } from "react-icons/si"
 import { HiTemplate } from "react-icons/hi"
 
 //--------------- interface
@@ -93,34 +93,29 @@ export const ProjectsData:projectsInterface[] = [
     },
     {
         id:"bqef3f9ehr",
-        title:"Blog API",
+        title:"Blog",
         description:"Esta API esta desarrollada con Express. Se utiliza una base de datos SQL para almacenar la informacion y un ORM, en este caso sequelize, para administrar la base de datos.\r\nEl contenido de los articulos se almacena en formato Markdown y luego el codigo es formateado en el cliente para ser mostrado en la pagina.",
-        images:["https://res.cloudinary.com/dyrpgj8od/image/upload/v1692212958/Portfolio/blog_api_xuruwn.png"],
-        linkCode: "https://github.com/Lauty128/Blog",
-        linkPage: null,
+        images:["https://res.cloudinary.com/dyrpgj8od/image/upload/v1695494775/Portfolio/121shots_so_cpdaog.png"],
+        linkCode: "https://github.com/Lauty128/blog",
+        linkPage: "https://lautarosilverii.blog/",
         technologies: [
             {
                 id: 0,
-                name: "NodeJS",
-                icon: FaNodeJs()
+                name: "Gatsby",
+                icon: SiGatsby()
             },
             {
                 id:1,
-                name: "JavaScript",
-                icon: FaJsSquare()
+                name: "React",
+                icon: FaReact()
             },
             {
                 id: 2,
-                name: "Sequelize",
-                icon: SiSequelize()
+                name: "CSS",
+                icon: FaCss3Alt()
             },
             {
                 id: 3,
-                name: "MYSQL",
-                icon: SiMysql()
-            },
-            {
-                id: 4,
                 name: "Markdown",
                 icon: SiMarkdown()
             },
